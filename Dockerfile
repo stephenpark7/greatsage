@@ -28,12 +28,6 @@ COPY server /app/server
 # Install all node modules
 RUN yarn install --check-files
 
-# Run database migrations
-RUN rails db:migrate
-
-# Set the working directory within the server directory
-WORKDIR /app/server
-
 # Ensure logs directory exists and set up proper permissions
 RUN mkdir -p tmp/pids tmp/sockets log && \
     chown -R root:root tmp log

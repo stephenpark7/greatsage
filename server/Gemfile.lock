@@ -123,6 +123,7 @@ GEM
     faker (3.4.1)
       i18n (>= 1.8.11, < 2)
     ffi (1.17.0)
+    ffi (1.17.0-aarch64-linux-gnu)
     ffi (1.17.0-arm64-darwin)
     formatador (1.1.0)
     globalid (1.2.1)
@@ -199,6 +200,8 @@ GEM
     nio4r (2.7.3)
     nokogiri (1.16.5)
       mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
+    nokogiri (1.16.5-aarch64-linux)
       racc (~> 1.4)
     nokogiri (1.16.5-arm64-darwin)
       racc (~> 1.4)
@@ -393,6 +396,7 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (1.7.3)
       mini_portile2 (~> 2.8.0)
+    sqlite3 (1.7.3-aarch64-linux)
     sqlite3 (1.7.3-arm64-darwin)
     stringio (3.1.0)
     strscan (3.1.0)
@@ -432,6 +436,7 @@ GEM
 
 PLATFORMS
   -darwin-21
+  aarch64-linux
   arm64-darwin-22
   arm64-darwin-23
 

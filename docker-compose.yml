@@ -1,0 +1,29 @@
+services:
+  rails_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rails_app
+    container_name: rails_app
+    ports:
+      - "3000:3000"
+    environment:
+      - RAILS_ENV=development
+    depends_on:
+      - db
+    networks:
+      - backend
+  db:
+    image: postgres:latest
+    container_name: postgres_db
+    environment:
+      POSTGRES_DB: greatsage_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - backend
+networks:
+  backend:
+    driver: bridge

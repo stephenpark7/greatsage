@@ -1,0 +1,14 @@
+.link {
+  text-decoration: none;
+  color: #333;
+}
+
+.title {
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 4rem;
+  margin: 2rem 0;
+  user-select: none;
+  width: fit-content;
+}

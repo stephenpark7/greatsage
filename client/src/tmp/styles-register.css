@@ -1,0 +1,60 @@
+/* 
+
+/* .App {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1.5rem;
+}
+
+ul {
+  padding: 0;
+}
+
+.page-title {
+  margin-bottom: 1.5rem;
+}
+
+.todo-list-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  gap: 0.6rem;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem;
+  list-style-type: none;
+  border: 1px solid #333;
+  border-radius: 0.25rem;
+}
+
+.task-title-prefix {
+  display: inline;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.task-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.task-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.task-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+  border: 1px solid #777;
+  border-radius: 0.25rem;
+} */

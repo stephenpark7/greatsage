@@ -12,6 +12,8 @@ COPY server/Gemfile server/Gemfile.lock .
 
 RUN bundle install
 
+COPY server .
+
 # Ensure logs directory exists and set up proper permissions
 RUN mkdir -p tmp/pids tmp/sockets log && \
     chown -R root:root tmp log

@@ -2,10 +2,12 @@
   "name": "greatsage",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Stephen Park",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "scripts": {
+    "start": "docker-compose up -d",
+    "build": "docker-compose build",
+    "stop": "docker-compose down"
+  }
 }

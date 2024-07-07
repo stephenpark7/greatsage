@@ -1,9 +1,10 @@
 import { toast } from "react-toastify";
 import { User } from "./User";
 
-const REGISTER_URL = "http://localhost:3000/api/v1/register";
-const LOGIN_URL = "http://localhost:3000/api/v1/login";
-const LOGOUT_URL = "http://localhost:3000/api/v1/logout";
+const BASE_URL = "http://localhost:3000/api/v1/auth/";
+const REGISTER_URL = `${BASE_URL}register`;
+const LOGIN_URL = `${BASE_URL}login`;
+const LOGOUT_URL = `${BASE_URL}logout`;
 
 export const API = {
   register: async (email, password) => {

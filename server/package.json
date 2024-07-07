@@ -16,6 +16,7 @@
   },
   "scripts": {
     "guard": "bundle exec guard",
-    "server": "rails server"
+    "server": "rails server",
+    "console": "rails console"
   }
 }

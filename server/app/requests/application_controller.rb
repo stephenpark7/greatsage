@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   rescue_from ResponseError, with: :render_error_response
 
-  # skip_before_action :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
   before_action :authenticate_user
 
   def render_error_response(message)

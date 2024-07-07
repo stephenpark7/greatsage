@@ -1,6 +1,12 @@
 # GreatSage
 
-This monorepo contains both the client and server codebases for the GreatSage project.
+This monorepo contains the codebases for both the client and server sides of the GreatSage project.
+
+## Tech Stack
+
+- **Client**: React, TypeScript
+- **Server**: Ruby on Rails
+- **Deployment**: Docker
 
 ## Directory Structure
 
@@ -16,21 +22,24 @@ This monorepo contains both the client and server codebases for the GreatSage pr
             package.json
             ...
 
+## Server Details
 
-## Tech Stack
+The server includes a lightweight authentication system using Ruby on Rails 7's has_secure_password method. Access tokens are stored in memory, while refresh tokens are stored securely as HTTPOnly cookies with HTTPS and SameSite=Secure attributes.
 
-- React, TypeScript
-- Ruby on Rails
-- Docker
+### Features
 
-## Instructions
+- **CORS**: Cross-Origin Resource Sharing
+- **CSP**: Content Security Policy
+- **Token Management**: Includes token revocation and protection against timing attacks
+- **Testing**: Extensive RSpec coverage, including penetration testing for security
 
-First build the server and client: `docker-compose build`
 
-To run server and client: `docker-compose up -d`
+## Setup Instructions
 
-## Ports used
+To run the server and client together using Docker Compose:
 
-3000 for React development server (front-end)
+1. Build the server and client: `docker-compose build`
 
-3001 for Ruby on Rails server (back-end)
+2. Start the server and client: `docker-compose up -d`
+
+You can also run the server or client separately using `npm start`, but you'll need to set up the database yourself in that case.

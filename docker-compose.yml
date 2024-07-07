@@ -1,4 +1,20 @@
 services:
+  react_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: react_app
+    container_name: react_app
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+    networks:
+      - backend
+    volumes:
+      - .:/app
+      - /app/client/node_modules
+    command: bash -c "cd client && npm run start"
   rails_app:
     build:
       context: .
@@ -16,7 +32,7 @@ services:
     volumes:
       - .:/app
       - /app/server/node_modules
-    command: bash -c "bundle exec rails db:migrate && bundle exec rails server -b 0.0.0.0"
+    command: bash -c "cd server && bundle exec rails db:migrate && bundle exec rails server -b 0.0.0.0"
   db:
     image: postgres:latest
     container_name: postgres_db

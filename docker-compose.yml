@@ -1,10 +1,9 @@
 services:
   react_app:
+    container_name: greatsage_react_app
     build:
       context: .
       dockerfile: Dockerfile
-    image: react_app
-    container_name: react_app
     ports:
       - "3001:3001"
     environment:
@@ -16,11 +15,10 @@ services:
       - /app/client/node_modules
     command: bash -c "cd client && npm run start"
   rails_app:
+    container_name: greatsage_rails_app
     build:
       context: .
       dockerfile: Dockerfile
-    image: rails_app
-    container_name: rails_app
     ports:
       - "3000:3000"
     environment:
@@ -35,9 +33,9 @@ services:
     command: bash -c "cd server && bundle exec rails db:migrate && bundle exec rails server -b 0.0.0.0"
   db:
     image: postgres:latest
-    container_name: postgres_db
+    container_name: greatsage_postgres_db
     environment:
-      POSTGRES_DB: greatsage_db
+      POSTGRES_DB: greatsage
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:

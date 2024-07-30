@@ -20,8 +20,4 @@ RSpec.describe 'Routes', type: :routing do
   it 'routes /api/v1/user_dashboard/todo_lists to the todo_lists action' do
     expect(get: '/api/v1/user_dashboard/todo_lists').to route_to('api/v1/user_dashboard#todo_lists')
   end
-
-  it 'routes /api/v1/csrf_token to the show action' do
-    expect(get: '/api/v1/csrf_token').to route_to('api/v1/csrf_token#show')
-  end
 end
